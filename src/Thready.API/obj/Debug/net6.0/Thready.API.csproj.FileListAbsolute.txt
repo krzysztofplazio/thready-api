@@ -1,0 +1,7 @@
+F:\sources\thready.backend\thredy.backend\src\Thready.API\obj\Debug\net6.0\Thready.API.csproj.AssemblyReference.cache
+F:\sources\thready.backend\thredy.backend\src\Thready.API\obj\Debug\net6.0\Thready.API.GeneratedMSBuildEditorConfig.editorconfig
+F:\sources\thready.backend\thredy.backend\src\Thready.API\obj\Debug\net6.0\Thready.API.AssemblyInfoInputs.cache
+F:\sources\thready.backend\thredy.backend\src\Thready.API\obj\Debug\net6.0\Thready.API.AssemblyInfo.cs
+F:\sources\thready.backend\thredy.backend\src\Thready.API\obj\Debug\net6.0\Thready.API.csproj.CoreCompileInputs.cache
+F:\sources\thready.backend\thredy.backend\src\Thready.API\obj\Debug\net6.0\Thready.API.MvcApplicationPartsAssemblyInfo.cs
+F:\sources\thready.backend\thredy.backend\src\Thready.API\obj\Debug\net6.0\Thready.API.MvcApplicationPartsAssemblyInfo.cache
