@@ -21,4 +21,5 @@ public class ThreadWorkItem
     public IEnumerable<Attachment> Attachments { get; set; } = Enumerable.Empty<Attachment>();
     public int ProjectId { get; set; }
     public Project Project { get; set; } = null!;
+    public IEnumerable<CustomValue> CustomValues { get; set; } = Enumerable.Empty<CustomValue>();
 }

@@ -580,6 +580,16 @@
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
         }
+      },
+      "Thready.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Thready.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Thready.Models.dll": {}
+        }
       }
     }
   },
@@ -1557,6 +1567,11 @@
         "system.runtime.compilerservices.unsafe.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Thready.Models/1.0.0": {
+      "type": "project",
+      "path": "../Thready.Models/Thready.Models.csproj",
+      "msbuildProject": "../Thready.Models/Thready.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1568,7 +1583,8 @@
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.22",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 6.0.22",
       "Swashbuckle.AspNetCore >= 6.5.0",
-      "System.IdentityModel.Tokens.Jwt >= 7.0.0"
+      "System.IdentityModel.Tokens.Jwt >= 7.0.0",
+      "Thready.Models >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1595,7 +1611,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "F:\\sources\\thready.backend\\thredy.backend\\src\\Thready.Models\\Thready.Models.csproj": {
+              "projectPath": "F:\\sources\\thready.backend\\thredy.backend\\src\\Thready.Models\\Thready.Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

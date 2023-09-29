@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using Thready.API.Contexts;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -8,7 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<ThreadyDatabaseContext>(options =>
-        options.UseNpgsql(Configuration.GetConnectionString("TheradyDatabase")));
+        options.UseNpgsql(builder.Configuration.GetConnectionString("TheradyDatabase")));
 
 var app = builder.Build();
 
