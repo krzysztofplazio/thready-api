@@ -6,6 +6,8 @@ public class ThreadWorkItem
     public string Title { get; set; } = null!;
     public int StateId { get; set; }
     public State State { get; set; } = null!;
+    public int PriorityId { get; set; }
+    public Priority Priority { get; set; } = null!;
     public string Description { get; set; } = null!;
     public IEnumerable<ThreadHistory> ThreadHistories { get; set; } = Enumerable.Empty<ThreadHistory>();
     public DateTime CreateDate { get; set; }

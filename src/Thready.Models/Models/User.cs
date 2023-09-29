@@ -9,4 +9,5 @@ public class User
     public string Username { get; set; } = null!;
     public string Password { get; set; } = null!;
     public IEnumerable<ProjectPermission> UsersProjectPermissions { get; set; } = null!;
+    public IEnumerable<Project> Projects { get; set; } = Enumerable.Empty<Project>();
 }
