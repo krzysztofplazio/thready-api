@@ -3,8 +3,11 @@ using Microsoft.AspNetCore.Mvc;
 namespace Thready.API.Controllers;
 
 [ApiController]
-[Route("[controller]")]
-public class WeatherForecastController : ControllerBase
+[Route("api/[controller]")]
+public class ProjectsController : ControllerBase
 {
-    
+    public IActionResult Get()
+    {
+        return Ok();
+    }
 }

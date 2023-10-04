@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "F:\\sources\\thready.backend\\thredy.backend\\src\\Thready.API\\Thready.API.csproj": {}
+    "/Users/krzysztofplazio/Documents/thready-api/src/Thready.API/Thready.API.csproj": {}
   },
   "projects": {
-    "F:\\sources\\thready.backend\\thredy.backend\\src\\Thready.API\\Thready.API.csproj": {
+    "/Users/krzysztofplazio/Documents/thready-api/src/Thready.API/Thready.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\sources\\thready.backend\\thredy.backend\\src\\Thready.API\\Thready.API.csproj",
+        "projectUniqueName": "/Users/krzysztofplazio/Documents/thready-api/src/Thready.API/Thready.API.csproj",
         "projectName": "Thready.API",
-        "projectPath": "F:\\sources\\thready.backend\\thredy.backend\\src\\Thready.API\\Thready.API.csproj",
-        "packagesPath": "C:\\Users\\mysie\\.nuget\\packages\\",
-        "outputPath": "F:\\sources\\thready.backend\\thredy.backend\\src\\Thready.API\\obj\\",
+        "projectPath": "/Users/krzysztofplazio/Documents/thready-api/src/Thready.API/Thready.API.csproj",
+        "packagesPath": "/Users/krzysztofplazio/.nuget/packages/",
+        "outputPath": "/Users/krzysztofplazio/Documents/thready-api/src/Thready.API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mysie\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/krzysztofplazio/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -26,8 +26,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "F:\\sources\\thready.backend\\thredy.backend\\src\\Thready.Models\\Thready.Models.csproj": {
-                "projectPath": "F:\\sources\\thready.backend\\thredy.backend\\src\\Thready.Models\\Thready.Models.csproj"
+              "/Users/krzysztofplazio/Documents/thready-api/src/Thready.Models/Thready.Models.csproj": {
+                "projectPath": "/Users/krzysztofplazio/Documents/thready-api/src/Thready.Models/Thready.Models.csproj"
               }
             }
           }
@@ -100,21 +100,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.414\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.411/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\sources\\thready.backend\\thredy.backend\\src\\Thready.Models\\Thready.Models.csproj": {
+    "/Users/krzysztofplazio/Documents/thready-api/src/Thready.Models/Thready.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\sources\\thready.backend\\thredy.backend\\src\\Thready.Models\\Thready.Models.csproj",
+        "projectUniqueName": "/Users/krzysztofplazio/Documents/thready-api/src/Thready.Models/Thready.Models.csproj",
         "projectName": "Thready.Models",
-        "projectPath": "F:\\sources\\thready.backend\\thredy.backend\\src\\Thready.Models\\Thready.Models.csproj",
-        "packagesPath": "C:\\Users\\mysie\\.nuget\\packages\\",
-        "outputPath": "F:\\sources\\thready.backend\\thredy.backend\\src\\Thready.Models\\obj\\",
+        "projectPath": "/Users/krzysztofplazio/Documents/thready-api/src/Thready.Models/Thready.Models.csproj",
+        "packagesPath": "/Users/krzysztofplazio/.nuget/packages/",
+        "outputPath": "/Users/krzysztofplazio/Documents/thready-api/src/Thready.Models/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mysie\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/krzysztofplazio/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -153,7 +153,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.414\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.411/RuntimeIdentifierGraph.json"
         }
       }
     }
