@@ -9,6 +9,8 @@ public class CustomValuesEntityTypeConfiguration : IEntityTypeConfiguration<Cust
     public void Configure(EntityTypeBuilder<CustomValue> builder)
     {
         builder.HasKey(e => e.Id);
+        builder.Property(e => e.Id)
+            .UseIdentityAlwaysColumn();
 
         builder.Property(e => e.Value)
             .HasMaxLength(1000)

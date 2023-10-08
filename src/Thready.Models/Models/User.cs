@@ -15,4 +15,5 @@ public class User
     public IEnumerable<ThreadWorkItem> CreatedThreads { get; set; } = Enumerable.Empty<ThreadWorkItem>();
     public IEnumerable<ThreadWorkItem> OwnedThreads { get; set; } = Enumerable.Empty<ThreadWorkItem>();
     public IEnumerable<ThreadHistory> ThreadHistories { get; set; } = Enumerable.Empty<ThreadHistory>();
+    public IEnumerable<Attachment> UplodedAttachments { get; set; } = Enumerable.Empty<Attachment>();
 }

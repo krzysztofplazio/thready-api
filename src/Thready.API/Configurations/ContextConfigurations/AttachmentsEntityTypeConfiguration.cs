@@ -9,6 +9,8 @@ public class AttachmentsEntityTypeConfiguration : IEntityTypeConfiguration<Attac
     public void Configure(EntityTypeBuilder<Attachment> builder)
     {
         builder.HasKey(e => e.Id);
+        builder.Property(e => e.Id)
+            .UseIdentityAlwaysColumn();
 
         builder.Property(e => e.Name)
             .HasMaxLength(100)
@@ -17,5 +19,9 @@ public class AttachmentsEntityTypeConfiguration : IEntityTypeConfiguration<Attac
         builder.Property(e => e.Content)
             .HasMaxLength(52_428_800)
             .IsRequired(true);
+
+        builder.HasOne(a => a.User)
+            .WithMany(u => u.UplodedAttachments)
+            .HasForeignKey(a => a.UserId);
     }
 }

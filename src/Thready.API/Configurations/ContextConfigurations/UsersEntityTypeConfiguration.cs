@@ -9,6 +9,8 @@ public class UsersEntityTypeConfiguration : IEntityTypeConfiguration<User>
     public void Configure(EntityTypeBuilder<User> builder)
     {
         builder.HasKey(e => e.Id);
+        builder.Property(e => e.Id)
+            .UseIdentityAlwaysColumn();
 
         builder.Property(e => e.FirstName)
             .HasMaxLength(50)
@@ -27,8 +29,12 @@ public class UsersEntityTypeConfiguration : IEntityTypeConfiguration<User>
             .IsRequired(true);
         
         builder.Property(e => e.Password)
-            .HasMaxLength(64)
+            .HasMaxLength(128)
             .IsRequired(true);
+
+        builder.HasMany(u => u.CreatedThreads)
+            .WithOne(tw => tw.CreatedBy)
+            .HasForeignKey(tr => tr.CreatedByUserId);
         
         builder.HasOne(u => u.Role)
             .WithOne(r => r.User)

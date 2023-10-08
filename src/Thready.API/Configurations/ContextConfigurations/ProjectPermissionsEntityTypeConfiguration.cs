@@ -9,5 +9,7 @@ public class ProjectPermissionsEntityTypeConfiguration : IEntityTypeConfiguratio
     public void Configure(EntityTypeBuilder<ProjectPermission> builder)
     {
         builder.HasKey(e => e.Id);
+        builder.Property(e => e.Id)
+            .UseIdentityAlwaysColumn();
     }
 }

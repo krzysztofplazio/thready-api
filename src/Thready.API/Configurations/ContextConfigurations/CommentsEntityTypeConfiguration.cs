@@ -9,6 +9,8 @@ public class CommentsEntityTypeConfiguration : IEntityTypeConfiguration<Comment>
     public void Configure(EntityTypeBuilder<Comment> builder)
     {
         builder.HasKey(e => e.Id);
+        builder.Property(e => e.Id)
+            .UseIdentityAlwaysColumn();
 
         builder.Property(e => e.Content)
             .HasMaxLength(5000)

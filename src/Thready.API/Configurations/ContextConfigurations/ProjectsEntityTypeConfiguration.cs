@@ -9,6 +9,8 @@ public class ProjectsEntityTypeConfiguration : IEntityTypeConfiguration<Project>
     public void Configure(EntityTypeBuilder<Project> builder)
     {
         builder.HasKey(e => e.Id);
+        builder.Property(e => e.Id)
+            .UseIdentityAlwaysColumn();
 
         builder.Property(e => e.Title)
             .HasMaxLength(50)

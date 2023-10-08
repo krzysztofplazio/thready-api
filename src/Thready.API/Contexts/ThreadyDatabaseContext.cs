@@ -1,16 +1,14 @@
 namespace Thready.API.Contexts;
 
 using Microsoft.EntityFrameworkCore;
+using Thready.API.Configurations.ContextConfigurations;
 using Thready.Models.Models;
 
 
 public class ThreadyDatabaseContext : DbContext
 {
-    protected readonly IConfiguration Configuration;
-
-    public ThreadyDatabaseContext(IConfiguration configuration)
+    public ThreadyDatabaseContext(DbContextOptions<ThreadyDatabaseContext> options) : base(options)
     {
-        Configuration = configuration;
     }
 
     public virtual DbSet<Attachment> Attachments { get; set; } = null!;
@@ -25,4 +23,19 @@ public class ThreadyDatabaseContext : DbContext
     public virtual DbSet<ThreadHistory> ThreadHistories { get; set; } = null!;
     public virtual DbSet<ThreadWorkItem> Threads { get; set; } = null!;
     public virtual DbSet<User> Users { get; set; } = null!;
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        new AttachmentsEntityTypeConfiguration().Configure(modelBuilder.Entity<Attachment>());
+        new CommentsEntityTypeConfiguration().Configure(modelBuilder.Entity<Comment>());
+        new CustomFieldsEntityTypeConfiguration().Configure(modelBuilder.Entity<CustomField>());
+        new CustomValuesEntityTypeConfiguration().Configure(modelBuilder.Entity<CustomValue>());
+        new PrioritiesEntityTypeConfiguration().Configure(modelBuilder.Entity<Priority>());
+        new ProjectsEntityTypeConfiguration().Configure(modelBuilder.Entity<Project>());
+        new ProjectPermissionsEntityTypeConfiguration().Configure(modelBuilder.Entity<ProjectPermission>());
+        new RolesEntityTypeConfiguration().Configure(modelBuilder.Entity<Role>());
+        new StatesEntityTypeConfiguration().Configure(modelBuilder.Entity<State>());
+        new ThreadHistoryEntityTypeConfiguration().Configure(modelBuilder.Entity<ThreadHistory>());
+        new UsersEntityTypeConfiguration().Configure(modelBuilder.Entity<User>());
+    }
 }

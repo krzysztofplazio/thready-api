@@ -10,6 +10,8 @@ public class ThreadsEntityTypeConfiguration : IEntityTypeConfiguration<ThreadWor
     public void Configure(EntityTypeBuilder<ThreadWorkItem> builder)
     {
         builder.HasKey(e => e.Id);
+        builder.Property(e => e.Id)
+            .UseIdentityAlwaysColumn();
 
         builder.Property(e => e.Title)
             .HasMaxLength(50)
@@ -36,10 +38,6 @@ public class ThreadsEntityTypeConfiguration : IEntityTypeConfiguration<ThreadWor
         
         builder.Property(e => e.ModificateDate)
             .IsRequired(false);
-
-        builder.HasOne(t => t.CreatedBy)
-            .WithMany(u => u.CreatedThreads)
-            .HasForeignKey(t => t.CreatedByUserId);
 
         builder.HasOne(t => t.OwnedBy)
             .WithMany(u => u.OwnedThreads)

@@ -7,4 +7,6 @@ public class Attachment
     public byte[] Content { get; set; } = Array.Empty<byte>();
     public int ThreadId { get; set; }
     public ThreadWorkItem Thread { get; set; } = null!;
+    public int UserId { get; set; }
+    public User User { get; set; } = null!;
 }

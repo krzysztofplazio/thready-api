@@ -44,3 +44,13 @@ F:\sources\thready.backend\thredy.backend\src\Thready.API\obj\Debug\net6.0\refin
 F:\sources\thready.backend\thredy.backend\src\Thready.API\obj\Debug\net6.0\Thready.API.pdb
 F:\sources\thready.backend\thredy.backend\src\Thready.API\obj\Debug\net6.0\Thready.API.genruntimeconfig.cache
 F:\sources\thready.backend\thredy.backend\src\Thready.API\obj\Debug\net6.0\ref\Thready.API.dll
+F:\sources\thready.backend\thredy.backend\src\Thready.API\bin\Debug\net6.0\AutoMapper.dll
+F:\sources\thready.backend\thredy.backend\src\Thready.API\bin\Debug\net6.0\FluentValidation.dll
+F:\sources\thready.backend\thredy.backend\src\Thready.API\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+F:\sources\thready.backend\thredy.backend\src\Thready.API\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+F:\sources\thready.backend\thredy.backend\src\Thready.API\bin\Debug\net6.0\Hellang.Middleware.ProblemDetails.dll
+F:\sources\thready.backend\thredy.backend\src\Thready.API\bin\Debug\net6.0\MediatR.dll
+F:\sources\thready.backend\thredy.backend\src\Thready.API\bin\Debug\net6.0\MediatR.Contracts.dll
+F:\sources\thready.backend\thredy.backend\src\Thready.API\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+F:\sources\thready.backend\thredy.backend\src\Thready.API\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+F:\sources\thready.backend\thredy.backend\src\Thready.API\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Pvm4UwTSWAPpj7Roevwqjat5FzJXOVNkJXteLjI7w3AWpEwUF6ePFFZ+cD8x4XQlkGH22GP7LMDJjOqAYT83Bw==",
+  "dgSpecHash": "v6hrLl1iqdLchPui4QhVSjzFMxfcaexxUgO5p4hqosfxHnWYesuMm/HfeWJplbzRcnAWEJwJWsJ+HLUkybqTaQ==",
   "success": true,
-  "projectFilePath": "/Users/krzysztofplazio/Documents/thready-api/src/Thready.Models/Thready.Models.csproj",
+  "projectFilePath": "F:\\sources\\thready.backend\\thredy.backend\\src\\Thready.Models\\Thready.Models.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

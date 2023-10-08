@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/krzysztofplazio/Documents/thready-api/src/Thready.Models/Thready.Models.csproj": {}
+    "F:\\sources\\thready.backend\\thredy.backend\\src\\Thready.Models\\Thready.Models.csproj": {}
   },
   "projects": {
-    "/Users/krzysztofplazio/Documents/thready-api/src/Thready.Models/Thready.Models.csproj": {
+    "F:\\sources\\thready.backend\\thredy.backend\\src\\Thready.Models\\Thready.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/krzysztofplazio/Documents/thready-api/src/Thready.Models/Thready.Models.csproj",
+        "projectUniqueName": "F:\\sources\\thready.backend\\thredy.backend\\src\\Thready.Models\\Thready.Models.csproj",
         "projectName": "Thready.Models",
-        "projectPath": "/Users/krzysztofplazio/Documents/thready-api/src/Thready.Models/Thready.Models.csproj",
-        "packagesPath": "/Users/krzysztofplazio/.nuget/packages/",
-        "outputPath": "/Users/krzysztofplazio/Documents/thready-api/src/Thready.Models/obj/",
+        "projectPath": "F:\\sources\\thready.backend\\thredy.backend\\src\\Thready.Models\\Thready.Models.csproj",
+        "packagesPath": "C:\\Users\\mysie\\.nuget\\packages\\",
+        "outputPath": "F:\\sources\\thready.backend\\thredy.backend\\src\\Thready.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/krzysztofplazio/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\mysie\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -53,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.411/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.414\\RuntimeIdentifierGraph.json"
         }
       }
     }

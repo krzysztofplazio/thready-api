@@ -4,11 +4,13 @@ using Thready.Models.Models;
 
 namespace Thready.API.Configurations.ContextConfigurations;
 
-public class ThreadEntityTypeConfiguration : IEntityTypeConfiguration<ThreadHistory>
+public class ThreadHistoryEntityTypeConfiguration : IEntityTypeConfiguration<ThreadHistory>
 {
     public void Configure(EntityTypeBuilder<ThreadHistory> builder)
     {
         builder.HasKey(e => e.Id);
+        builder.Property(e => e.Id)
+            .UseIdentityAlwaysColumn();
 
         builder.Property(e => e.Type)
             .HasMaxLength(10)
