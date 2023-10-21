@@ -1,3 +1,4 @@
+using System.Globalization;
 using System.IdentityModel.Tokens.Jwt;
 using System.Reflection.Metadata.Ecma335;
 using System.Security.Claims;
@@ -77,6 +78,6 @@ public class AuthController : ControllerBase
     public async Task<IActionResult> RegisterUser([FromBody] RegisterUserRequest registerUserRequest, CancellationToken cancellationToken = default)
     {
         var id = await _mediator.Send(new CreateUserCommand(registerUserRequest), cancellationToken: cancellationToken);
-        return Created($"/api/users/{id}", null);
+        return Created(string.Create(CultureInfo.InvariantCulture, $"/api/users/{id}"), value: null);
     }
 }
