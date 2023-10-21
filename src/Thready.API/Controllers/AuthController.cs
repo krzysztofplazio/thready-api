@@ -11,8 +11,10 @@ using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.IdentityModel.Tokens;
 using Thready.API.Commands.CreateUser;
 using Thready.API.Commands.VerifyPassword;
+using Thready.API.Constants;
 using Thready.API.Dtos.Authentication;
 using Thready.API.Dtos.Users;
+using Thready.API.Exceptions.Users;
 using Thready.API.Queries.GetUserByUsername;
 using Thready.Models.Models;
 
@@ -50,7 +52,7 @@ public class AuthController : ControllerBase
         if (!string.Equals(user.Username, userResult.Username, StringComparison.Ordinal)
             || verifyResult != PasswordVerificationResult.Success && verifyResult != PasswordVerificationResult.SuccessRehashNeeded)
         {
-            return Unauthorized();
+            throw new BadUsernameOrPasswordException(UserExceptionErrorCodes.BadUsernameOrPassword);
         }
 
         var secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JwtOptions:Secret"]));
@@ -58,7 +60,10 @@ public class AuthController : ControllerBase
         var tokeOptions = new JwtSecurityToken(
             issuer: _configuration["JwtOptions:Issuer"],
             audience: _configuration["JwtOptions:Audience"],
-            claims: new List<Claim>(),
+            claims: new List<Claim>
+            {
+                new(ClaimTypes.Role, userResult.Role),
+            },
             expires: DateTime.Now.AddSeconds(_configuration.GetValue<int>("JwtOptions:ExpirationSeconds")),
             signingCredentials: signinCredentials
         );

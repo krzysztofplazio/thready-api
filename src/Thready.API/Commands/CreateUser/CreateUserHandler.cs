@@ -31,9 +31,10 @@ public class CreateUserHandler : IRequestHandler<CreateUserCommand, int>
     {
         var userDto = _mapper.Map<UserDto>(request.RegisterUserRequest);
         var user = _mapper.Map<User>(userDto);
-
+        var userRole = await _usersRepository.GetRoleByRoleName(request.RegisterUserRequest.Role).ConfigureAwait(false);
         user.Password = Encoding.UTF8.GetBytes(_passwordHasher.HashPassword(user, request.RegisterUserRequest.Password));
-        user.RoleId = (await _usersRepository.GetRoleByRoleName(request.RegisterUserRequest.Role).ConfigureAwait(false))?.Id ?? _configuration.GetValue<int>("DefautUsersRole");
+        user.RoleId = userRole?.Id ?? _configuration.GetValue<int>("DefautUsersRole");
+        
         await _usersRepository.InsertUser(user).ConfigureAwait(false);
         return user.Id;
     }

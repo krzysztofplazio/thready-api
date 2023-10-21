@@ -2,7 +2,7 @@ using System.Runtime.Serialization;
 
 namespace Thready.API.Exceptions.Users;
 
-public class UserNotExistException : Exception
+public class UserNotExistException : UserException
 {
     public UserNotExistException()
     {

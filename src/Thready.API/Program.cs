@@ -1,5 +1,6 @@
 using System.Reflection;
 using System.Text;
+using System.Text.Json.Serialization;
 using FluentValidation.AspNetCore;
 using Hellang.Middleware.ProblemDetails;
 using MediatR;
@@ -7,7 +8,10 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Serilog;
 using Thready.API.Contexts;
+using Thready.API.Exceptions.Users;
+using Thready.API.ProblemDetails.Users;
 using Thready.API.Repositories.Users;
 using Thready.Models.Models;
 
@@ -20,8 +24,18 @@ builder.Services.AddProblemDetails(setup =>
     setup.IncludeExceptionDetails = (_, _) =>
            builder.Environment.IsDevelopment()
         || builder.Environment.IsStaging();
+    setup.Map<UserException>(ex => new UserExceptionDetails(ex));
 });
 // Add services to the container.
+
+builder.Host.UseSerilog((ctx, loggerConfiguration) => 
+{    
+    loggerConfiguration
+        .ReadFrom.Configuration(ctx.Configuration)
+        .Enrich.FromLogContext()
+        .Enrich.WithProperty("Thready.API", typeof(Program).Assembly.GetName().Name)
+        .Enrich.WithProperty("Environment", ctx.HostingEnvironment);
+});
 
 builder.Services.AddCors(options =>
 {
@@ -35,7 +49,9 @@ builder.Services.AddCors(options =>
                       });
 });
 
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+                .AddJsonOptions(options => 
+                    options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull);
 
 builder.Services.AddFluentValidationAutoValidation();
 builder.Services.AddFluentValidationClientsideAdapters();
@@ -80,6 +96,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseSerilogRequestLogging();
 
 app.UseHttpsRedirection();
 app.UseCors(AppCorsPolicy);
