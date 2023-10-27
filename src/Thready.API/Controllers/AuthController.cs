@@ -5,17 +5,23 @@ using System.Security.Claims;
 using System.Text;
 using AutoMapper;
 using MediatR;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.IdentityModel.Tokens;
 using Thready.API.Commands.CreateUser;
+using Thready.API.Commands.GenerateAccessToken;
+using Thready.API.Commands.GenerateRefreshToken;
+using Thready.API.Commands.UpdateUser;
 using Thready.API.Commands.VerifyPassword;
 using Thready.API.Constants;
 using Thready.API.Dtos.Authentication;
 using Thready.API.Dtos.Users;
 using Thready.API.Exceptions.Users;
+using Thready.API.Queries.GetPrincipalFromExpiredToken;
 using Thready.API.Queries.GetUserByUsername;
 using Thready.Models.Models;
 
@@ -40,7 +46,7 @@ public class AuthController : ControllerBase
     }
 
     [HttpPost("login")]
-    public async Task<IActionResult> LoginAsync([FromBody] LoginModel user, CancellationToken cancellationToken = default)
+    public async ValueTask<IActionResult> LoginAsync([FromBody] LoginModel user, CancellationToken cancellationToken = default)
     {
         if (user?.Username is null || user?.Password is null)
         {
@@ -56,28 +62,96 @@ public class AuthController : ControllerBase
             throw new BadUsernameOrPasswordException(UserExceptionErrorCodes.BadUsernameOrPassword);
         }
 
-        var secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JwtOptions:Secret"]));
-        var signinCredentials = new SigningCredentials(secretKey, SecurityAlgorithms.HmacSha256);
-        var tokeOptions = new JwtSecurityToken(
-            issuer: _configuration["JwtOptions:Issuer"],
-            audience: _configuration["JwtOptions:Audience"],
-            claims: new List<Claim>
+        var claims = new List<Claim>
+        {
+            new(ClaimTypes.Role, userResult.Role),
+            new(ClaimTypes.NameIdentifier, user.Username),
+        };
+        var token = await _mediator.Send(new GenerateAccessTokenCommand(claims));
+        var refreshToken = await _mediator.Send(new GenerateRefreshTokenCommand());
+
+        await _mediator.Send(new UpdateUsersRefreshTokenCommand(userResult.Username,
+                                                                refreshToken,
+                                                                DateTime.UtcNow.AddDays(_configuration.GetValue<double>("JwtOptions:RefreshToken:ExpiryDays"))),
+                                                                cancellationToken: cancellationToken);
+        var identity = new ClaimsIdentity(CookieAuthenticationDefaults.AuthenticationScheme, ClaimTypes.Role, ClaimTypes.NameIdentifier);
+        identity.AddClaims(claims);
+        var principal = new ClaimsPrincipal(identity);
+        await HttpContext.SignInAsync(
+            CookieAuthenticationDefaults.AuthenticationScheme,
+            principal,
+            new AuthenticationProperties
             {
-                new(ClaimTypes.Role, userResult.Role),
-            },
-            expires: DateTime.Now.AddSeconds(_configuration.GetValue<int>("JwtOptions:ExpirationSeconds")),
-            signingCredentials: signinCredentials
-        );
+                IsPersistent = true,
+                AllowRefresh = true,
+                ExpiresUtc = DateTimeOffset.UtcNow.AddDays(1),
+            });
 
-        var tokenString = new JwtSecurityTokenHandler().WriteToken(tokeOptions);
-
-        return Ok(new AuthenticatedResponse { Token = tokenString });
+        return Ok(new AuthenticatedResponse 
+        { 
+            AccessToken = token,
+            RefreshToken = refreshToken,
+        });
     }
 
+    [Authorize(Roles = "Admin")]
     [HttpPost("register")]
     public async Task<IActionResult> RegisterUser([FromBody] RegisterUserRequest registerUserRequest, CancellationToken cancellationToken = default)
     {
         var id = await _mediator.Send(new CreateUserCommand(registerUserRequest), cancellationToken: cancellationToken);
         return Created(string.Create(CultureInfo.InvariantCulture, $"/api/users/{id}"), value: null);
+    }
+
+    
+    [HttpPost]
+    [Route("refresh")]
+    public async ValueTask<IActionResult> Refresh(TokenApiModel tokenApiModel, CancellationToken cancellationToken = default)
+    {
+        if (tokenApiModel is null)
+        {
+            return BadRequest();
+        }
+
+        var principal = await _mediator.Send(new GetPrincipalFromExpiredTokenQuery(tokenApiModel.AccessToken));
+        var username = principal.Identity?.Name ?? throw new UserHasNoIdentityException(); 
+        var user = await _mediator.Send(new GetUserByUsernameQuery(username), cancellationToken);
+        if (user is null || !string.Equals(user.RefreshToken, tokenApiModel.RefreshToken, StringComparison.Ordinal) || user.RefreshTokenExpiryTime <= DateTime.UtcNow)
+        {
+            return BadRequest();
+        }
+        
+        var newAccessToken = await _mediator.Send(new GenerateAccessTokenCommand(principal.Claims));
+        var newRefreshToken = await _mediator.Send(new GenerateRefreshTokenCommand());
+        await _mediator.Send(new UpdateUsersRefreshTokenCommand(username,
+                                                                newRefreshToken,
+                                                                DateTime.UtcNow.AddDays(_configuration.GetValue<double>("JwtOptions:RefreshToken:ExpiryDays"))),
+                                                                cancellationToken: cancellationToken);
+
+        return Ok(new AuthenticatedResponse()
+        {
+            AccessToken = newAccessToken,
+            RefreshToken = newRefreshToken,
+        });
+    }
+
+    [HttpPost, Authorize]
+    [Route("revoke")]
+    public async Task<IActionResult> Revoke(CancellationToken cancellationToken = default)
+    {
+        var username = User.Identity?.Name ?? throw new UserHasNoIdentityException();
+        var user = await _mediator.Send(new GetUserByUsernameQuery(username)) ?? throw new UserNotExistException(UserExceptionErrorCodes.UserNotExist);
+
+        await _mediator.Send(new UpdateUsersRefreshTokenCommand(username,
+                                                                refreshToken: null,
+                                                                DateTime.MinValue),
+                                                                cancellationToken: cancellationToken);
+        return NoContent();
+    }
+
+    [HttpDelete("logout"), Authorize]
+    public async Task<IActionResult> Logout()
+    {
+        await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+        return NoContent();
     }
 }

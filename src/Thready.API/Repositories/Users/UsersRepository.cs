@@ -23,5 +23,10 @@ public class UsersRepository : IUsersRepository
 
     public async Task<Role?> GetRoleByRoleName(string name, CancellationToken cancellationToken = default) 
                         => await _context.Roles.SingleOrDefaultAsync(x => x.Name == name, cancellationToken).ConfigureAwait(false);
-}
 
+    public async Task UpdateUser(User user, CancellationToken cancellationToken = default)
+    {
+        _context.Users.Update(user);
+        await _context.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
+    }
+}

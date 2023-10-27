@@ -9,6 +9,8 @@ public class User
     public string Username { get; set; } = null!;
     public byte[] Password { get; set; } = null!;
     public int RoleId { get; set; }
+    public string? RefreshToken { get; set; }
+    public DateTime RefreshTokenExpiryTime { get; set; }
     public Role Role { get; set; } = null!;
     public IEnumerable<ProjectPermission> UsersProjectPermissions { get; set; } = null!;
     public IEnumerable<Project> Projects { get; set; } = Enumerable.Empty<Project>();

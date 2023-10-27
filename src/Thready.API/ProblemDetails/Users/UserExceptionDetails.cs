@@ -19,6 +19,9 @@ public class UserExceptionDetails : Microsoft.AspNetCore.Mvc.ProblemDetails
                 break;
             case UserExceptionErrorCodes.BadUsernameOrPassword:
                 Type += "/bad-username-or-password";
+                break;
+            case UserExceptionErrorCodes.UserHasNoIdentity:
+                Type += "/user-has-no-identity";
                 Status = StatusCodes.Status404NotFound;
                 break;
         }
