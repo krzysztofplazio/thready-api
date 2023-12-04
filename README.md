@@ -1,8 +1,6 @@
 # thready-api
 The Thready API - micro ALM system dreated to deepen your knowledge of programming in ASP.NET.
 
-# ASP.NET Core & EntityFramework Core Based Startup Template
-
 ## Prerequirements
 
 * Visual Studio Code
