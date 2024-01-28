@@ -1,8 +1,9 @@
 using Microsoft.EntityFrameworkCore;
-using Thready.API.Contexts;
-using Thready.Models.Models;
+using Thready.Infrastructure.Contexts;
+using Thready.Core.Models;
+using Thready.Core.Repositories.Users;
 
-namespace Thready.API.Repositories.Users;
+namespace Thready.Infrastructure.Repositories.Users;
 
 public class UsersRepository : IUsersRepository
 {
@@ -12,7 +13,7 @@ public class UsersRepository : IUsersRepository
     {
         _context = context;
     }
-    public async Task<User?> GetUserByUsername(string username, CancellationToken cancellationToken = default) 
+    public async Task<User?> GetUserByUsername(string username, CancellationToken cancellationToken = default)
                         => await _context.Users.Include(x => x.Role).SingleOrDefaultAsync(x => x.Username == username, cancellationToken).ConfigureAwait(false);
 
     public async Task InsertUser(User user, CancellationToken cancellationToken = default)
@@ -21,7 +22,7 @@ public class UsersRepository : IUsersRepository
         await _context.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
     }
 
-    public async Task<Role?> GetRoleByRoleName(string name, CancellationToken cancellationToken = default) 
+    public async Task<Role?> GetRoleByRoleName(string name, CancellationToken cancellationToken = default)
                         => await _context.Roles.SingleOrDefaultAsync(x => x.Name == name, cancellationToken).ConfigureAwait(false);
 
     public async Task UpdateUser(User user, CancellationToken cancellationToken = default)

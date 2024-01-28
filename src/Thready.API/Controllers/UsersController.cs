@@ -2,8 +2,8 @@ using System.Security.Claims;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Thready.API.Exceptions.Users;
-using Thready.API.Queries.GetUserByUsername;
+using Thready.Application.Exceptions.Users;
+using Thready.Application.Queries.GetUserByUsername;
 
 namespace Thready.API.Controllers;
 

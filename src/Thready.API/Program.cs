@@ -1,26 +1,26 @@
 using System.Reflection;
 using System.Text;
 using System.Text.Json.Serialization;
-using FluentValidation;
-using FluentValidation.AspNetCore;
-using Hellang.Middleware.ProblemDetails;
-using MediatR;
 using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
 using Microsoft.Net.Http.Headers;
+using Thready.Application.Exceptions.Users;
+using Thready.Application.ProblemDetails.Users;
+using Thready.Application.Validators;
+using Thready.Core.Models;
+using Thready.Core.Repositories.Users;
+using Thready.Infrastructure.Contexts;
+using Thready.Infrastructure.Repositories.Users;
+using Hellang.Middleware.ProblemDetails;
 using Serilog;
-using Thready.API.Contexts;
-using Thready.API.Dtos.Authentication;
-using Thready.API.Exceptions.Users;
-using Thready.API.ProblemDetails.Users;
-using Thready.API.Repositories.Users;
-using Thready.API.Validators;
-using Thready.Models.Models;
+using MediatR;
+using FluentValidation.AspNetCore;
+using FluentValidation;
+using Thready.Application.Dtos.Authentication;
+using Microsoft.IdentityModel.Tokens;
 
 var AppCorsPolicy = "_appCorsPolicy";
 
@@ -74,7 +74,8 @@ builder.Services.AddHttpContextAccessor();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
+var assembly = Assembly.Load("Thready.Application");
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(assembly));
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
@@ -83,14 +84,14 @@ builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
 
 builder.Services.AddDbContext<ThreadyDatabaseContext>(options =>
 {
-    options.UseNpgsql(builder.Configuration.GetConnectionString("TheradyDatabase"));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("ThreadyDatabase"));
     options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
 });
 
 builder.Services.AddAuthentication(options => 
 {
-    options.DefaultScheme = "JWT_OR_COOKIE";
-    options.DefaultChallengeScheme = "JWT_OR_COOKIE";
+    options.DefaultScheme = "COOKIE";
+    options.DefaultChallengeScheme = "COOKIE";
 })
 .AddCookie(options =>
 {
@@ -107,29 +108,10 @@ builder.Services.AddAuthentication(options =>
         return Task.CompletedTask;
     };
 })
-.AddJwtBearer(options =>
-{
-    options.TokenValidationParameters = new TokenValidationParameters
-    {
-        ValidateIssuer = true,
-        ValidateAudience = true,
-        ValidateLifetime = true,
-        ValidateIssuerSigningKey = true,
-        ValidIssuer = builder.Configuration["JwtOptions:Issuer"],
-        ValidAudience = builder.Configuration["JwtOptions:Audience"],
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JwtOptions:Secret"])),
-    };
-})
-.AddPolicyScheme("JWT_OR_COOKIE", "JWT_OR_COOKIE", options =>
+.AddPolicyScheme("COOKIE", "COOKIE", options =>
 {
     options.ForwardDefaultSelector = context =>
-    {
-        string authorization = context.Request.Headers[HeaderNames.Authorization];
-        if (!string.IsNullOrEmpty(authorization) && authorization.StartsWith("Bearer ", StringComparison.Ordinal))
-        {
-            return JwtBearerDefaults.AuthenticationScheme;
-        }
-            
+    {       
         return CookieAuthenticationDefaults.AuthenticationScheme;
     };
 });
