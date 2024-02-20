@@ -3,11 +3,7 @@ using Thready.Application.Dtos.Users;
 
 namespace Thready.Application.Commands.CreateUser;
 
-public class CreateUserCommand : IRequest<int>
+public class CreateUserCommand(RegisterUserRequest registerUserRequest) : IRequest<int>
 {
-    public RegisterUserRequest RegisterUserRequest { get; }
-    public CreateUserCommand(RegisterUserRequest registerUserRequest)
-    {
-        RegisterUserRequest = registerUserRequest;
-    }
+    public RegisterUserRequest RegisterUserRequest { get; } = registerUserRequest;
 }

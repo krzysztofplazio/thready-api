@@ -1,9 +1,8 @@
-namespace Thready.Infrastructure.Contexts;
-
 using Microsoft.EntityFrameworkCore;
 using Thready.Infrastructure.Configurations.ContextConfigurations;
 using Thready.Core.Models;
 
+namespace Thready.Infrastructure.Contexts;
 
 public class ThreadyDatabaseContext : DbContext
 {

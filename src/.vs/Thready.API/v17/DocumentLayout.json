@@ -1,12 +1,160 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\sources\\thready.backend clone\\thready-api\\src\\",
-  "Documents": [],
+  "WorkspaceRootPath": "F:\\sources\\thready.backend\\thready-api\\src\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{65920A00-5677-429B-B0B1-68DD62531678}|Thready.Application\\Thready.Application.csproj|f:\\sources\\thready.backend\\thready-api\\src\\thready.application\\commands\\createuser\\createuserhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65920A00-5677-429B-B0B1-68DD62531678}|Thready.Application\\Thready.Application.csproj|solutionrelative:thready.application\\commands\\createuser\\createuserhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D587ED2-E16B-4E2D-992F-F08B2F01DCD8}|Thready.Core\\Thready.Core.csproj|f:\\sources\\thready.backend\\thready-api\\src\\thready.core\\enums\\roleenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D587ED2-E16B-4E2D-992F-F08B2F01DCD8}|Thready.Core\\Thready.Core.csproj|solutionrelative:thready.core\\enums\\roleenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D587ED2-E16B-4E2D-992F-F08B2F01DCD8}|Thready.Core\\Thready.Core.csproj|f:\\sources\\thready.backend\\thready-api\\src\\thready.core\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D587ED2-E16B-4E2D-992F-F08B2F01DCD8}|Thready.Core\\Thready.Core.csproj|solutionrelative:thready.core\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B483509-EF1B-4155-9500-8845785B11C8}|Thready.Infrastructure\\Thready.Infrastructure.csproj|f:\\sources\\thready.backend\\thready-api\\src\\thready.infrastructure\\repositories\\users\\usersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B483509-EF1B-4155-9500-8845785B11C8}|Thready.Infrastructure\\Thready.Infrastructure.csproj|solutionrelative:thready.infrastructure\\repositories\\users\\usersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7812D56A-ADD4-424E-A6C9-B33587D972FC}|Thready.API\\Thready.API.csproj|f:\\sources\\thready.backend\\thready-api\\src\\thready.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7812D56A-ADD4-424E-A6C9-B33587D972FC}|Thready.API\\Thready.API.csproj|solutionrelative:thready.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65920A00-5677-429B-B0B1-68DD62531678}|Thready.Application\\Thready.Application.csproj|f:\\sources\\thready.backend\\thready-api\\src\\thready.application\\utils\\enumutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65920A00-5677-429B-B0B1-68DD62531678}|Thready.Application\\Thready.Application.csproj|solutionrelative:thready.application\\utils\\enumutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7812D56A-ADD4-424E-A6C9-B33587D972FC}|Thready.API\\Thready.API.csproj|f:\\sources\\thready.backend\\thready-api\\src\\thready.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7812D56A-ADD4-424E-A6C9-B33587D972FC}|Thready.API\\Thready.API.csproj|solutionrelative:thready.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65920A00-5677-429B-B0B1-68DD62531678}|Thready.Application\\Thready.Application.csproj|f:\\sources\\thready.backend\\thready-api\\src\\thready.application\\profiles\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65920A00-5677-429B-B0B1-68DD62531678}|Thready.Application\\Thready.Application.csproj|solutionrelative:thready.application\\profiles\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UsersRepository.cs",
+              "DocumentMoniker": "F:\\sources\\thready.backend\\thready-api\\src\\Thready.Infrastructure\\Repositories\\Users\\UsersRepository.cs",
+              "RelativeDocumentMoniker": "Thready.Infrastructure\\Repositories\\Users\\UsersRepository.cs",
+              "ToolTip": "F:\\sources\\thready.backend\\thready-api\\src\\Thready.Infrastructure\\Repositories\\Users\\UsersRepository.cs",
+              "RelativeToolTip": "Thready.Infrastructure\\Repositories\\Users\\UsersRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-20T21:27:04.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Role.cs",
+              "DocumentMoniker": "F:\\sources\\thready.backend\\thready-api\\src\\Thready.Core\\Models\\Role.cs",
+              "RelativeDocumentMoniker": "Thready.Core\\Models\\Role.cs",
+              "ToolTip": "F:\\sources\\thready.backend\\thready-api\\src\\Thready.Core\\Models\\Role.cs",
+              "RelativeToolTip": "Thready.Core\\Models\\Role.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-20T21:15:16.051Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RoleEnum.cs",
+              "DocumentMoniker": "F:\\sources\\thready.backend\\thready-api\\src\\Thready.Core\\Enums\\RoleEnum.cs",
+              "RelativeDocumentMoniker": "Thready.Core\\Enums\\RoleEnum.cs",
+              "ToolTip": "F:\\sources\\thready.backend\\thready-api\\src\\Thready.Core\\Enums\\RoleEnum.cs",
+              "RelativeToolTip": "Thready.Core\\Enums\\RoleEnum.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-20T21:12:31.443Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CreateUserHandler.cs",
+              "DocumentMoniker": "F:\\sources\\thready.backend\\thready-api\\src\\Thready.Application\\Commands\\CreateUser\\CreateUserHandler.cs",
+              "RelativeDocumentMoniker": "Thready.Application\\Commands\\CreateUser\\CreateUserHandler.cs",
+              "ToolTip": "F:\\sources\\thready.backend\\thready-api\\src\\Thready.Application\\Commands\\CreateUser\\CreateUserHandler.cs",
+              "RelativeToolTip": "Thready.Application\\Commands\\CreateUser\\CreateUserHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAABUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-20T21:02:55.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EnumUtils.cs",
+              "DocumentMoniker": "F:\\sources\\thready.backend\\thready-api\\src\\Thready.Application\\Utils\\EnumUtils.cs",
+              "RelativeDocumentMoniker": "Thready.Application\\Utils\\EnumUtils.cs",
+              "ToolTip": "F:\\sources\\thready.backend\\thready-api\\src\\Thready.Application\\Utils\\EnumUtils.cs",
+              "RelativeToolTip": "Thready.Application\\Utils\\EnumUtils.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-20T21:02:44.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "F:\\sources\\thready.backend\\thready-api\\src\\Thready.API\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Thready.API\\Controllers\\AuthController.cs",
+              "ToolTip": "F:\\sources\\thready.backend\\thready-api\\src\\Thready.API\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Thready.API\\Controllers\\AuthController.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAwwB8AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-20T21:01:21.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserProfile.cs",
+              "DocumentMoniker": "F:\\sources\\thready.backend\\thready-api\\src\\Thready.Application\\Profiles\\UserProfile.cs",
+              "RelativeDocumentMoniker": "Thready.Application\\Profiles\\UserProfile.cs",
+              "ToolTip": "F:\\sources\\thready.backend\\thready-api\\src\\Thready.Application\\Profiles\\UserProfile.cs",
+              "RelativeToolTip": "Thready.Application\\Profiles\\UserProfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-20T21:00:29.271Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "F:\\sources\\thready.backend\\thready-api\\src\\Thready.API\\Program.cs",
+              "RelativeDocumentMoniker": "Thready.API\\Program.cs",
+              "ToolTip": "F:\\sources\\thready.backend\\thready-api\\src\\Thready.API\\Program.cs",
+              "RelativeToolTip": "Thready.API\\Program.cs",
+              "ViewState": "AQIAAFQAAAAAAAAAAAAwwHAAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-20T20:38:17.95Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

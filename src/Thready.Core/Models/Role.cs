@@ -1,9 +1,11 @@
+using Thready.Core.Enums;
+
 namespace Thready.Core.Models;
 
 public class Role
 {
     public int Id { get; set; }
-    public string Name { get; set; } = null!;
+    public RoleEnum Name { get; set; }
     public int Priority { get; set; }
-    public User User { get; set; } = null!;
+    public IEnumerable<User> Users { get; set; } = Enumerable.Empty<User>();
 }

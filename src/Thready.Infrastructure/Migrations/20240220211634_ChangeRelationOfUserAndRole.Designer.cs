@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using Thready.Infrastructure.Contexts;
@@ -11,9 +12,11 @@ using Thready.Infrastructure.Contexts;
 namespace Thready.Application.Migrations
 {
     [DbContext(typeof(ThreadyDatabaseContext))]
-    partial class ThreadyDatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20240220211634_ChangeRelationOfUserAndRole")]
+    partial class ChangeRelationOfUserAndRole
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -375,6 +378,12 @@ namespace Thready.Application.Migrations
                         .IsRequired()
                         .HasMaxLength(128)
                         .HasColumnType("bytea");
+
+                    b.Property<string>("RefreshToken")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("RefreshTokenExpiryTime")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<int>("RoleId")
                         .HasColumnType("integer");

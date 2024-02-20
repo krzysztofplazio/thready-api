@@ -84,7 +84,8 @@ builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
 
 builder.Services.AddDbContext<ThreadyDatabaseContext>(options =>
 {
-    options.UseNpgsql(builder.Configuration.GetConnectionString("ThreadyDatabase"));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("ThreadyDatabase"), 
+                      conf => conf.MigrationsAssembly("Thready.Infrastructure"));
     options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
 });
 

@@ -21,4 +21,8 @@
     <ProjectReference Include="..\Thready.Core\Thready.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Commands\VerifyPassword\" />
+  </ItemGroup>
+
 </Project>

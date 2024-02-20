@@ -25,6 +25,11 @@ public class UserExceptionDetails : Microsoft.AspNetCore.Mvc.ProblemDetails
                 Type += "/user-has-no-identity";
                 Status = StatusCodes.Status404NotFound;
                 break;
+            case UserExceptionErrorCodes.UsernameTaken:
+                Type += "/username-taken";
+                Status = StatusCodes.Status422UnprocessableEntity;
+                break;
+
         }
     }
 }
