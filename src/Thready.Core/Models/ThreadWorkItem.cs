@@ -9,7 +9,7 @@ public class ThreadWorkItem
     public int PriorityId { get; set; }
     public Priority Priority { get; set; } = null!;
     public string Description { get; set; } = null!;
-    public IEnumerable<ThreadHistory> ThreadHistories { get; set; } = Enumerable.Empty<ThreadHistory>();
+    public ICollection<ThreadHistory> ThreadHistories { get; set; } = [];
     public DateTime CreateDate { get; set; }
     public DateTime ModificateDate { get; set; }
     public int CreatedByUserId { get; set; }
@@ -17,9 +17,9 @@ public class ThreadWorkItem
     public int OwnedByUserId { get; set; }
     public User OwnedBy { get; set; } = null!;
     public DateTime? DueDate { get; set; }
-    public IEnumerable<Comment> Comments { get; set; } = Enumerable.Empty<Comment>();
-    public IEnumerable<Attachment> Attachments { get; set; } = Enumerable.Empty<Attachment>();
+    public ICollection<Comment> Comments { get; set; } = [];
+    public ICollection<Attachment> Attachments { get; set; } = [];
     public int ProjectId { get; set; }
     public Project Project { get; set; } = null!;
-    public IEnumerable<CustomValue> CustomValues { get; set; } = Enumerable.Empty<CustomValue>();
+    public ICollection<CustomValue> CustomValues { get; set; } = [];
 }

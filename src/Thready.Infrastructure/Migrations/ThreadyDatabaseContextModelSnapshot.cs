@@ -52,7 +52,7 @@ namespace Thready.Application.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Attachments");
+                    b.ToTable("Attachments", (string)null);
                 });
 
             modelBuilder.Entity("Thready.Core.Models.Comment", b =>
@@ -83,7 +83,7 @@ namespace Thready.Application.Migrations
 
                     b.HasIndex("ThreadId");
 
-                    b.ToTable("Comments");
+                    b.ToTable("Comments", (string)null);
                 });
 
             modelBuilder.Entity("Thready.Core.Models.CustomField", b =>
@@ -106,7 +106,7 @@ namespace Thready.Application.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CustomFields");
+                    b.ToTable("CustomFields", (string)null);
                 });
 
             modelBuilder.Entity("Thready.Core.Models.CustomValue", b =>
@@ -140,7 +140,7 @@ namespace Thready.Application.Migrations
 
                     b.HasIndex("ThreadId");
 
-                    b.ToTable("CustomValues");
+                    b.ToTable("CustomValues", (string)null);
                 });
 
             modelBuilder.Entity("Thready.Core.Models.Priority", b =>
@@ -158,7 +158,7 @@ namespace Thready.Application.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Priorities");
+                    b.ToTable("Priorities", (string)null);
                 });
 
             modelBuilder.Entity("Thready.Core.Models.Project", b =>
@@ -189,7 +189,7 @@ namespace Thready.Application.Migrations
 
                     b.HasIndex("CreatorId");
 
-                    b.ToTable("Projects");
+                    b.ToTable("Projects", (string)null);
                 });
 
             modelBuilder.Entity("Thready.Core.Models.ProjectPermission", b =>
@@ -212,7 +212,7 @@ namespace Thready.Application.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("ProjectPermissions");
+                    b.ToTable("ProjectPermissions", (string)null);
                 });
 
             modelBuilder.Entity("Thready.Core.Models.Role", b =>
@@ -233,7 +233,7 @@ namespace Thready.Application.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Roles");
+                    b.ToTable("Roles", (string)null);
                 });
 
             modelBuilder.Entity("Thready.Core.Models.State", b =>
@@ -251,7 +251,7 @@ namespace Thready.Application.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("States");
+                    b.ToTable("States", (string)null);
                 });
 
             modelBuilder.Entity("Thready.Core.Models.ThreadHistory", b =>
@@ -287,7 +287,7 @@ namespace Thready.Application.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("ThreadHistories");
+                    b.ToTable("ThreadHistories", (string)null);
                 });
 
             modelBuilder.Entity("Thready.Core.Models.ThreadWorkItem", b =>
@@ -347,7 +347,7 @@ namespace Thready.Application.Migrations
                     b.HasIndex("StateId")
                         .IsUnique();
 
-                    b.ToTable("Threads");
+                    b.ToTable("Threads", (string)null);
                 });
 
             modelBuilder.Entity("Thready.Core.Models.User", b =>
@@ -388,7 +388,7 @@ namespace Thready.Application.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
                 });
 
             modelBuilder.Entity("Thready.Core.Models.Attachment", b =>

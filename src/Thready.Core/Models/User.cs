@@ -10,10 +10,10 @@ public class User
     public byte[] Password { get; set; } = null!;
     public int RoleId { get; set; }
     public Role Role { get; set; } = null!;
-    public IEnumerable<ProjectPermission> UsersProjectPermissions { get; set; } = null!;
-    public IEnumerable<Project> Projects { get; set; } = Enumerable.Empty<Project>();
-    public IEnumerable<ThreadWorkItem> CreatedThreads { get; set; } = Enumerable.Empty<ThreadWorkItem>();
-    public IEnumerable<ThreadWorkItem> OwnedThreads { get; set; } = Enumerable.Empty<ThreadWorkItem>();
-    public IEnumerable<ThreadHistory> ThreadHistories { get; set; } = Enumerable.Empty<ThreadHistory>();
-    public IEnumerable<Attachment> UplodedAttachments { get; set; } = Enumerable.Empty<Attachment>();
+    public ICollection<ProjectPermission> UsersProjectPermissions { get; set; } = null!;
+    public ICollection<Project> Projects { get; set; } = [];
+    public ICollection<ThreadWorkItem> CreatedThreads { get; set; } = [];
+    public ICollection<ThreadWorkItem> OwnedThreads { get; set; } = [];
+    public ICollection<ThreadHistory> ThreadHistories { get; set; } = [];
+    public ICollection<Attachment> UplodedAttachments { get; set; } = [];
 }

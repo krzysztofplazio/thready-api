@@ -8,6 +8,8 @@ public class UsersEntityTypeConfiguration : IEntityTypeConfiguration<User>
 {
     public void Configure(EntityTypeBuilder<User> builder)
     {
+        builder.ToTable("Users");
+
         builder.HasKey(e => e.Id);
         builder.Property(e => e.Id)
             .UseIdentityAlwaysColumn();
@@ -39,5 +41,8 @@ public class UsersEntityTypeConfiguration : IEntityTypeConfiguration<User>
         builder.HasOne(u => u.Role)
             .WithMany(r => r.Users)
             .HasForeignKey(u => u.RoleId);
+
+        builder.Navigation(e => e.Role)
+            .AutoInclude();
     }
 }

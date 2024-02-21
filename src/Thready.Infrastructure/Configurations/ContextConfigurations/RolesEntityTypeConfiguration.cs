@@ -9,6 +9,8 @@ public class RolesEntityTypeConfiguration : IEntityTypeConfiguration<Role>
 {
     public void Configure(EntityTypeBuilder<Role> builder)
     {
+        builder.ToTable("Roles");
+
         builder.HasKey(e => e.Id);
         builder.Property(e => e.Id)
             .UseIdentityAlwaysColumn();

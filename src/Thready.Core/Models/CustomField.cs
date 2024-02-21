@@ -6,5 +6,5 @@ public class CustomField
     public string Name { get; set; } = null!;
     public string Type { get; set; } = null!;
     public bool IsRequired { get; set; }
-    public IEnumerable<CustomValue> CustomValues { get; set; } = Enumerable.Empty<CustomValue>();
+    public ICollection<CustomValue> CustomValues { get; set; } = [];
 }

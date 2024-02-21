@@ -15,7 +15,7 @@ public class UsersRepository : IUsersRepository
         _context = context;
     }
     public async Task<User?> GetUserByUsername(string username, CancellationToken cancellationToken = default)
-                        => await _context.Users.SingleOrDefaultAsync(x => x.Username == username, cancellationToken).ConfigureAwait(false);
+                        =>  await _context.Users.FirstOrDefaultAsync(x => x.Username == username, cancellationToken).ConfigureAwait(false);
 
     public async Task InsertUser(User user, CancellationToken cancellationToken = default)
     {

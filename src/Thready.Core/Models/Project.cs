@@ -10,6 +10,6 @@ public class Project
     public DateTime DueDate { get; set; }
     public int CreatorId { get; set; }
     public User Creator { get; set; } = null!;
-    public IEnumerable<ThreadWorkItem> Threads { get; set; } = Enumerable.Empty<ThreadWorkItem>();
-    public IEnumerable<ProjectPermission> ProjectPermissions { get; set; } = Enumerable.Empty<ProjectPermission>();
+    public ICollection<ThreadWorkItem> Threads { get; set; } = [];
+    public ICollection<ProjectPermission> ProjectPermissions { get; set; } = [];
 }
