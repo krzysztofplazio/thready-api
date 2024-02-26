@@ -14,15 +14,15 @@
     <PackageReference Include="Automapper" Version="12.0.1" />
     <PackageReference Include="FluentValidation" Version="11.9.0" />
     <PackageReference Include="MediatR" Version="12.2.0" />
+    <PackageReference Include="Meziantou.Analyzer" Version="2.0.145">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="8.0.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Thready.Core\Thready.Core.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Commands\VerifyPassword\" />
   </ItemGroup>
 
 </Project>

@@ -2,6 +2,7 @@ using System.Security.Claims;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Thready.Application.Dtos.Users;
 using Thready.Application.Exceptions.Users;
 using Thready.Application.Queries.GetUserByUsername;
 
@@ -19,6 +20,7 @@ public class UsersController : ControllerBase
     }
 
     [HttpGet("me")]
+    [Produces(typeof(UserDto))]
     public async Task<IActionResult> GetCurrentUser()
     {
         var username = HttpContext.User?.Claims

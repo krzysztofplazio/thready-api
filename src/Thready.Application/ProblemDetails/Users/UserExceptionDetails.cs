@@ -29,7 +29,6 @@ public class UserExceptionDetails : Microsoft.AspNetCore.Mvc.ProblemDetails
                 Type += "/username-taken";
                 Status = StatusCodes.Status422UnprocessableEntity;
                 break;
-
         }
     }
 }

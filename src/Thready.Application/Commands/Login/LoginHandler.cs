@@ -11,6 +11,7 @@ using Thready.Application.Exceptions.Users;
 using Thready.Application.Queries.GetUserByUsername;
 using Thready.Core.Models;
 using Thready.Core.Repositories.Users;
+using System.Globalization;
 
 namespace Thready.Application.Commands.Login;
 
@@ -41,7 +42,7 @@ public class LoginHandler(IPasswordHasher<User> passwordHasher,
         var claims = new List<Claim>
         {
             new(ClaimTypes.Role, user.Role.Name.ToString()),
-            new(ClaimTypes.NameIdentifier, user.Id.ToString()),
+            new(ClaimTypes.NameIdentifier, user.Id.ToString(CultureInfo.InvariantCulture)),
         };
 
         var identity = new ClaimsIdentity(CookieAuthenticationDefaults.AuthenticationScheme, ClaimTypes.Role, ClaimTypes.NameIdentifier);

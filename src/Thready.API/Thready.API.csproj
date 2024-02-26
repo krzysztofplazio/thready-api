@@ -21,7 +21,7 @@
 	<PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
 	<PackageReference Include="Hellang.Middleware.ProblemDetails" Version="6.5.1" />
 	<PackageReference Include="MediatR" Version="12.2.0" />
-	<PackageReference Include="Meziantou.Analyzer" Version="2.0.139">
+	<PackageReference Include="Meziantou.Analyzer" Version="2.0.145">
 		<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		<PrivateAssets>all</PrivateAssets>
 	</PackageReference>
