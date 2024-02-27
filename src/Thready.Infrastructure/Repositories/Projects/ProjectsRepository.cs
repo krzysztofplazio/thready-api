@@ -37,6 +37,11 @@ public class ProjectsRepository(ThreadyDatabaseContext context) : IProjectsRepos
                 Creator = x.Creator,
             });
 
+        if (search is not null)
+        {
+            baseQuery = baseQuery.Where(search);
+        }
+
         if (order is not null)
         {
             baseQuery = baseQuery.OrderBy(order);
@@ -66,4 +71,10 @@ public class ProjectsRepository(ThreadyDatabaseContext context) : IProjectsRepos
                         DueDate = x.DueDate,
                         
                     }).FirstOrDefaultAsync(x => x.Id == id, cancellationToken).ConfigureAwait(false);
+
+    public async Task InsertProject(Project project, CancellationToken cancellationToken)
+    {
+        await _context.Projects.AddAsync(project, cancellationToken).ConfigureAwait(false);
+        await _context.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
+    }
 }

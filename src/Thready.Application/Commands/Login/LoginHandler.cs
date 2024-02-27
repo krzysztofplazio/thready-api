@@ -56,6 +56,6 @@ public class LoginHandler(IPasswordHasher<User> passwordHasher,
                 IsPersistent = true,
                 AllowRefresh = true,
                 ExpiresUtc = DateTimeOffset.UtcNow.AddDays(ExpiresDays),
-            });
+            }).ConfigureAwait(false);
     }
 }

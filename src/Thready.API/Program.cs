@@ -21,6 +21,7 @@ using FluentValidation.AspNetCore;
 using FluentValidation;
 using Thready.Application.Dtos.Authentication;
 using Microsoft.IdentityModel.Tokens;
+using Thready.Infrastructure.Repositories.Projects;
 
 var AppCorsPolicy = "_appCorsPolicy";
 
@@ -80,6 +81,7 @@ builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(assembly));
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.AddScoped<IUsersRepository, UsersRepository>();
+builder.Services.AddScoped<IProjectsRepository, ProjectsRepository>();
 builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
 
 builder.Services.AddDbContext<ThreadyDatabaseContext>(options =>

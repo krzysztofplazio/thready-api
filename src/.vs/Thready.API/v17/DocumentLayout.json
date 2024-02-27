@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "F:\\sources\\thready.backend\\thready-api\\src\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{65920A00-5677-429B-B0B1-68DD62531678}|Thready.Application\\Thready.Application.csproj|f:\\sources\\thready.backend\\thready-api\\src\\thready.application\\commands\\addproject\\addprojecthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65920A00-5677-429B-B0B1-68DD62531678}|Thready.Application\\Thready.Application.csproj|solutionrelative:thready.application\\commands\\addproject\\addprojecthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7812D56A-ADD4-424E-A6C9-B33587D972FC}|Thready.API\\Thready.API.csproj|f:\\sources\\thready.backend\\thready-api\\src\\thready.api\\controllers\\projectscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7812D56A-ADD4-424E-A6C9-B33587D972FC}|Thready.API\\Thready.API.csproj|solutionrelative:thready.api\\controllers\\projectscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D587ED2-E16B-4E2D-992F-F08B2F01DCD8}|Thready.Core\\Thready.Core.csproj|f:\\sources\\thready.backend\\thready-api\\src\\thready.core\\models\\projectpermission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D587ED2-E16B-4E2D-992F-F08B2F01DCD8}|Thready.Core\\Thready.Core.csproj|solutionrelative:thready.core\\models\\projectpermission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6B483509-EF1B-4155-9500-8845785B11C8}|Thready.Infrastructure\\Thready.Infrastructure.csproj|f:\\sources\\thready.backend\\thready-api\\src\\thready.infrastructure\\repositories\\projects\\projectsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6B483509-EF1B-4155-9500-8845785B11C8}|Thready.Infrastructure\\Thready.Infrastructure.csproj|solutionrelative:thready.infrastructure\\repositories\\projects\\projectsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6257DA5-0256-42FD-96D0-1D764D583DDF}|NewFolder1{F6257DA5-0256-42FD-96D0-1D764D583DDF}|F:\\sources\\thready.backend\\thready-api\\src\\.editorconfig||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{F6257DA5-0256-42FD-96D0-1D764D583DDF}|NewFolder1{F6257DA5-0256-42FD-96D0-1D764D583DDF}|solutionrelative:.editorconfig||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{65920A00-5677-429B-B0B1-68DD62531678}|Thready.Application\\Thready.Application.csproj|f:\\sources\\thready.backend\\thready-api\\src\\thready.application\\dtos\\projects\\projectpermissiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65920A00-5677-429B-B0B1-68DD62531678}|Thready.Application\\Thready.Application.csproj|solutionrelative:thready.application\\dtos\\projects\\projectpermissiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D587ED2-E16B-4E2D-992F-F08B2F01DCD8}|Thready.Core\\Thready.Core.csproj|f:\\sources\\thready.backend\\thready-api\\src\\thready.core\\repositories\\users\\iprojectsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D587ED2-E16B-4E2D-992F-F08B2F01DCD8}|Thready.Core\\Thready.Core.csproj|solutionrelative:thready.core\\repositories\\users\\iprojectsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{65920A00-5677-429B-B0B1-68DD62531678}|Thready.Application\\Thready.Application.csproj|f:\\sources\\thready.backend\\thready-api\\src\\thready.application\\queries\\getassignedprojects\\getassignedprojectshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,6 +33,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{65920A00-5677-429B-B0B1-68DD62531678}|Thready.Application\\Thready.Application.csproj|f:\\sources\\thready.backend\\thready-api\\src\\thready.application\\commands\\login\\loginhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{65920A00-5677-429B-B0B1-68DD62531678}|Thready.Application\\Thready.Application.csproj|solutionrelative:thready.application\\commands\\login\\loginhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6257DA5-0256-42FD-96D0-1D764D583DDF}|Solution Items{F6257DA5-0256-42FD-96D0-1D764D583DDF}|F:\\sources\\thready.backend\\thready-api\\src\\.editorconfig||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{F6257DA5-0256-42FD-96D0-1D764D583DDF}|Solution Items{F6257DA5-0256-42FD-96D0-1D764D583DDF}|solutionrelative:.editorconfig||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7812D56A-ADD4-424E-A6C9-B33587D972FC}|Thready.API\\Thready.API.csproj|f:\\sources\\thready.backend\\thready-api\\src\\thready.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7812D56A-ADD4-424E-A6C9-B33587D972FC}|Thready.API\\Thready.API.csproj|solutionrelative:thready.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,54 +50,132 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AddProjectHandler.cs",
+              "DocumentMoniker": "F:\\sources\\thready.backend\\thready-api\\src\\Thready.Application\\Commands\\AddProject\\AddProjectHandler.cs",
+              "RelativeDocumentMoniker": "Thready.Application\\Commands\\AddProject\\AddProjectHandler.cs",
+              "ToolTip": "F:\\sources\\thready.backend\\thready-api\\src\\Thready.Application\\Commands\\AddProject\\AddProjectHandler.cs",
+              "RelativeToolTip": "Thready.Application\\Commands\\AddProject\\AddProjectHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAABeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T18:21:21.576Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ProjectsRepository.cs",
-              "DocumentMoniker": "F:\\sources\\thready.backend\\thready-api\\src\\Thready.Infrastructure\\Repositories\\Projects\\ProjectsRepository.cs",
-              "RelativeDocumentMoniker": "Thready.Infrastructure\\Repositories\\Projects\\ProjectsRepository.cs",
-              "ToolTip": "F:\\sources\\thready.backend\\thready-api\\src\\Thready.Infrastructure\\Repositories\\Projects\\ProjectsRepository.cs",
-              "RelativeToolTip": "Thready.Infrastructure\\Repositories\\Projects\\ProjectsRepository.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAIAwwD0AAAAiAAAA",
+              "DocumentIndex": 1,
+              "Title": "ProjectsController.cs",
+              "DocumentMoniker": "F:\\sources\\thready.backend\\thready-api\\src\\Thready.API\\Controllers\\ProjectsController.cs",
+              "RelativeDocumentMoniker": "Thready.API\\Controllers\\ProjectsController.cs",
+              "ToolTip": "F:\\sources\\thready.backend\\thready-api\\src\\Thready.API\\Controllers\\ProjectsController.cs",
+              "RelativeToolTip": "Thready.API\\Controllers\\ProjectsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAABFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-26T19:28:41.727Z",
+              "WhenOpened": "2024-02-27T18:06:55.16Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "ProjectPermission.cs",
+              "DocumentMoniker": "F:\\sources\\thready.backend\\thready-api\\src\\Thready.Core\\Models\\ProjectPermission.cs",
+              "RelativeDocumentMoniker": "Thready.Core\\Models\\ProjectPermission.cs",
+              "ToolTip": "F:\\sources\\thready.backend\\thready-api\\src\\Thready.Core\\Models\\ProjectPermission.cs",
+              "RelativeToolTip": "Thready.Core\\Models\\ProjectPermission.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAQAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T18:01:57.413Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProjectPermissionDto.cs",
+              "DocumentMoniker": "F:\\sources\\thready.backend\\thready-api\\src\\Thready.Application\\Dtos\\Projects\\ProjectPermissionDto.cs",
+              "RelativeDocumentMoniker": "Thready.Application\\Dtos\\Projects\\ProjectPermissionDto.cs",
+              "ToolTip": "F:\\sources\\thready.backend\\thready-api\\src\\Thready.Application\\Dtos\\Projects\\ProjectPermissionDto.cs",
+              "RelativeToolTip": "Thready.Application\\Dtos\\Projects\\ProjectPermissionDto.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAAAAoAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T18:03:38.682Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProjectsRepository.cs",
+              "DocumentMoniker": "F:\\sources\\thready.backend\\thready-api\\src\\Thready.Infrastructure\\Repositories\\Projects\\ProjectsRepository.cs",
+              "RelativeDocumentMoniker": "Thready.Infrastructure\\Repositories\\Projects\\ProjectsRepository.cs",
+              "ToolTip": "F:\\sources\\thready.backend\\thready-api\\src\\Thready.Infrastructure\\Repositories\\Projects\\ProjectsRepository.cs",
+              "RelativeToolTip": "Thready.Infrastructure\\Repositories\\Projects\\ProjectsRepository.cs",
+              "ViewState": "AQIAAC8AAAAAAAAAAAApwEsAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T17:52:58.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "F:\\sources\\thready.backend\\thready-api\\src\\Thready.API\\Program.cs",
+              "RelativeDocumentMoniker": "Thready.API\\Program.cs",
+              "ToolTip": "F:\\sources\\thready.backend\\thready-api\\src\\Thready.API\\Program.cs",
+              "RelativeToolTip": "Thready.API\\Program.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAAADgAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T17:50:28.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IProjectsRepository.cs",
+              "DocumentMoniker": "F:\\sources\\thready.backend\\thready-api\\src\\Thready.Core\\Repositories\\Users\\IProjectsRepository.cs",
+              "RelativeDocumentMoniker": "Thready.Core\\Repositories\\Users\\IProjectsRepository.cs",
+              "ToolTip": "F:\\sources\\thready.backend\\thready-api\\src\\Thready.Core\\Repositories\\Users\\IProjectsRepository.cs",
+              "RelativeToolTip": "Thready.Core\\Repositories\\Users\\IProjectsRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwA8AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T17:09:05.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "GetAssignedProjectsHandler.cs",
               "DocumentMoniker": "F:\\sources\\thready.backend\\thready-api\\src\\Thready.Application\\Queries\\GetAssignedProjects\\GetAssignedProjectsHandler.cs",
               "RelativeDocumentMoniker": "Thready.Application\\Queries\\GetAssignedProjects\\GetAssignedProjectsHandler.cs",
               "ToolTip": "F:\\sources\\thready.backend\\thready-api\\src\\Thready.Application\\Queries\\GetAssignedProjects\\GetAssignedProjectsHandler.cs",
               "RelativeToolTip": "Thready.Application\\Queries\\GetAssignedProjects\\GetAssignedProjectsHandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAJAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACwAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-26T19:28:01.903Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "LoginHandler.cs",
               "DocumentMoniker": "F:\\sources\\thready.backend\\thready-api\\src\\Thready.Application\\Commands\\Login\\LoginHandler.cs",
               "RelativeDocumentMoniker": "Thready.Application\\Commands\\Login\\LoginHandler.cs",
               "ToolTip": "F:\\sources\\thready.backend\\thready-api\\src\\Thready.Application\\Commands\\Login\\LoginHandler.cs",
               "RelativeToolTip": "Thready.Application\\Commands\\Login\\LoginHandler.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAMwC8AAAA3AAAA",
+              "ViewState": "AQIAAAoAAAAAAAAAAIAwwBwAAABBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-26T19:27:47.981Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": ".editorconfig",
               "DocumentMoniker": "F:\\sources\\thready.backend\\thready-api\\src\\.editorconfig",
               "RelativeDocumentMoniker": ".editorconfig",
